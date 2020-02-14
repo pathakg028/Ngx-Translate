@@ -1,0 +1,55 @@
+header{
+    padding: 43px 47px;
+}
+.row {
+    justify-content: space-between;
+}
+.block.center {
+    margin: 0 auto;
+}
+
+.back{
+    color: #cecece;
+    margin: 0 0 0 30px;
+}
+.block.right {
+    margin-left: auto;
+    display: flex;
+}
+// .block.right ul {
+//     display: flex;
+//     padding: 0;
+//     margin: 0;
+// }
+// .block.right ul li{
+//     padding: 0 20px;
+// }
+.block.right ul li:not(:last-child){
+    border-right: 1px solid #ddd
+}
+.contact-details a{
+    display: block;
+}
+.contact-details a i{
+    color: #0056b3;
+    margin-right: 5px;
+}
+
+.langChange {
+    color: #000;
+    font-size: 12.5px;
+} 
+
+.langChange ul {
+    display: flex;
+    cursor: pointer;
+    margin: 9px 10px 0 0;
+}
+ 
+.langChange ul li a{
+    padding: 0 10px;
+}
+.langChange ul li a.active{
+    font-weight: 600;
+    color: #0056b3;
+}

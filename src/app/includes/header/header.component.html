@@ -1,0 +1,48 @@
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="block left">
+        <a href="#">Angular Multilanguage</a>
+        <a routerLink="{{goBackLink.url}}" *ngIf="goBackLink.text" class="back">
+          <i class="fas fa-chevron-left"></i> {{goBackLink.text}}
+        </a>
+      </div>
+      <div class="block center">
+        <!-- <div>{{'header.text' | translate}}</div>
+        <div [innerHTML]="'header.text' | translate"></div> -->
+
+        <app-menu *ngIf="headerNav"></app-menu>
+      </div>
+      <div class="block right"> <div class="langChange">
+        <ul>
+          <li>
+            <a [class.active]="switchLang=='de'" (click)="selectedLanguage('de')"
+            routerLink="de/{{pageName}}"
+            >DE</a>
+          </li>
+          <li>
+            <a [class.active]="switchLang=='en'" (click)="selectedLanguage('en')"
+            routerLink="/{{pageName}}">EN</a>
+          </li>
+        </ul>
+      </div>
+
+        <div class="contact-details" *ngIf="headerContactDetails">
+          <a href="mailto:uxtrendz@email.com"><i class="fas fa-envelope"></i> uxtrendz@email.com</a>
+          <a href="mailto:uxtrendz@email.com"><i class="fas fa-phone"></i> 000 (123) 456 78 90</a>
+        </div>
+        <ng-container *ngIf="headerLoginBlock">
+          <button *ngIf="!loggedInUser" class="btn btn-outline-primary" (click)="onSignInButtonClick()">Sign In</button>
+          <ul *ngIf="loggedInUser">
+            <li>
+              Welcome <strong class="text-primary">{{loggedInUser}}</strong>
+            </li>
+            <li>
+              <a (click)="onLogOut()"><i class="fas fa-unlock"></i> Logout</a>
+            </li>
+          </ul>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+      *ngFor="let menu of 'header.menu' | translate"
+      ><a routerLink="{{languageStatus}}/{{menu.link}}" [innerHTML]="menu.text">
+        </a>
+      </li>
+  </ul>
+</nav>
