@@ -1,0 +1,26 @@
+{
+    "header" :{
+        "menu" : [
+           {
+               "text": "Home",
+               "link" : "home"
+            },
+           {
+               "text": "About Us",
+               "link" : "about"
+            },
+           {
+               "text": "Products",
+               "link" : "products"
+            },
+           {
+               "text": "Services",
+               "link" : "services"
+            },
+           {
+               "text": "Contact Us",
+               "link" : "contact"
+            }
+        ]
+    }
+}
